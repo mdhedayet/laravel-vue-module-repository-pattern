@@ -1,10 +1,8 @@
-import AdminRoot from '../views/App.vue';
-
 const componentRoutes = [
   {
     path: '/admin',
     name: 'AdminRoot',
-    component: AdminRoot,
+    component: () => import('../views/App.vue'),
   }
 ];
 
