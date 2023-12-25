@@ -23,10 +23,7 @@ class UserController extends Controller
    public function index()
    {
        $users = $this->userRepository->getAllUsers();
-
-       return view('user::index', [
-           'users' => $users
-       ]);
+       return response()->json($users);
    }
     
 
